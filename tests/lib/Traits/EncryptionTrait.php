@@ -64,6 +64,7 @@ trait EncryptionTrait {
 		/** @var Setup $userSetup */
 		$userSetup = $container->query('UserSetup');
 		$userSetup->setupUser($name, $password);
+		$this->encryptionApp->setUp();
 		$keyManager->init($name, $password);
 	}
 
